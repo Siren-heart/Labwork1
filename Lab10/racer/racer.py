@@ -76,11 +76,9 @@ class Enemy(pygame.sprite.Sprite):
             
             # 2. Подгоняем размер (как у игрока)
             self.image = pygame.transform.scale(self.image, (70, 80)) 
-            
-            # 3. ПЕРЕВОРАЧИВАЕМ КАРТИНКУ НА 180 ГРАДУСОВ
-            
+
         except FileNotFoundError:
-            self.image = pygame.Surface((70, 80))
+            self.image = pygame.Surface((60, 80))
             self.image.fill(BLUE)
             
         self.rect = self.image.get_rect()
@@ -120,13 +118,13 @@ P1 = Player()
 C1 = Coin()
 E1 = Enemy() # Создаем врага
 
-coins_group = pygame.sprite.Group()
+coins_group = pygame.sprite.Group()# Группа для монет
 coins_group.add(C1)
 
 enemies_group = pygame.sprite.Group() # Группа для врагов
 enemies_group.add(E1)
 
-all_sprites = pygame.sprite.Group()
+all_sprites = pygame.sprite.Group()# Группа для всех спрайтов (для удобства отрисовки)
 all_sprites.add(P1)
 all_sprites.add(C1)
 all_sprites.add(E1) # Добавляем врага ко всем спрайтам
