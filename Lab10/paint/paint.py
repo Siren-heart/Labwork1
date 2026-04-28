@@ -44,17 +44,17 @@ def main():
                 if event.key == pygame.K_F4 and alt_held: return
                 if event.key == pygame.K_ESCAPE: return
                 
-                # --- ВЫБОР ИНСТРУМЕНТА ---
+                #выбор инструмента
                 if event.key == pygame.K_1: tool = 'brush'
                 if event.key == pygame.K_2: tool = 'rect'
                 if event.key == pygame.K_3: tool = 'circle'
                 if event.key == pygame.K_4: tool = 'eraser'
                 
-                # --- ВЫБОР ЦВЕТА ---
+                # выбор цвета (только для кисти и фигур, ластик всегда белый)
                 if event.key in colors:
                     color = colors[event.key]
                     
-                # --- ВЫБОР РАЗМЕРА ---
+                #выбор размера (только для кисти и ластика, фигуры будут рисоваться с толщиной линии radius)
                 if event.key == pygame.K_UP:
                     radius = min(100, radius + 1)
                 if event.key == pygame.K_DOWN:
