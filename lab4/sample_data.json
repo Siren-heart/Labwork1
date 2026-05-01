@@ -1,0 +1,24 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Aida",
+      "age": 19,
+      "courses": ["Python", "Math"]
+    },
+    {
+      "id": 2,
+      "name": "Dias",
+      "age": 20,
+      "courses": ["Physics", "JSON"]
+    },
+    {
+      "id": 3,
+      "name": "Malika",
+      "age": 18,
+      "courses": ["Algorithms", "Python"]
+    }
+  ],
+  "active": true,
+  "group": "Practice4"
+}
