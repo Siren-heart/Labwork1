@@ -1,10 +1,11 @@
+import os
 import psycopg2
 
 # --- НАСТРОЙКИ ---
 DB_PARAMS = {
     "dbname": "lab_db",
     "user": "postgres",
-    "password": "***REMOVED***", # ВПИШИ СВОЙ ПАРОЛЬ
+    "password": os.environ.get("PGPASSWORD", ""),  # set PGPASSWORD before running
     "host": "127.0.0.1",
     "port": "5432"
 }
